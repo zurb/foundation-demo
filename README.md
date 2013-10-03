@@ -12,6 +12,7 @@ Make sure you have Ruby 1.9.3+ installed on your system, then run the following 
 ```bash
 git clone git@github.com:zurb/foundation-demo.git
 cd foundation-demo
+git checkout finished
 bin/setup
 ```
 
