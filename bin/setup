@@ -1,0 +1,14 @@
+#!/bin/sh
+
+if which ruby >/dev/null; then
+  which bundle
+  if [ $? -eq 1 ] ; then
+    gem install bundler
+  fi
+  bundle install
+  bundle exec compass compile
+  echo "\nReady to go, to make changes to Sass run: bundle exec compass watch\n"
+else
+  echo "Please ruby 1.9.3+"
+  exit 1
+fi
