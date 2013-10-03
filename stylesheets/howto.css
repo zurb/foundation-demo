@@ -1,4 +1,88 @@
-/* line 1, ../sass/howto.scss */
+/* line 3, ../sass/howto.scss */
+h1, h2, h3, h4, h5 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+}
+/* line 8, ../sass/howto.scss */
+h1 .subheader, h2 .subheader, h3 .subheader, h4 .subheader, h5 .subheader {
+  font-weight: 300;
+}
+
+/* line 12, ../sass/howto.scss */
+.clearing-thumbs, [data-clearing] {
+  margin: 0 -0.625em;
+  padding: 0;
+}
+/* line 15, ../sass/howto.scss */
+.clearing-thumbs li, [data-clearing] li {
+  margin: 0;
+}
+
+/* line 18, ../sass/howto.scss */
+.button {
+  border: none;
+  box-shadow: none;
+}
+
+/* line 21, ../sass/howto.scss */
 header {
-  background: #343434;
+  background: #222;
+  padding: 2em 0;
+  margin: 0 0 1.6em;
+}
+/* line 26, ../sass/howto.scss */
+header h1, header h2, header h3, header h4, header h5 {
+  text-align: center;
+  color: #fff;
+}
+/* line 28, ../sass/howto.scss */
+header h1 {
+  margin-bottom: .3em;
+  line-height: 1.2;
+}
+/* line 29, ../sass/howto.scss */
+header a {
+  color: #ccc;
+  text-decoration: underline;
+}
+
+/* line 33, ../sass/howto.scss */
+.work-example {
+  margin-bottom: 1.4em;
+}
+/* line 37, ../sass/howto.scss */
+.work-example a:first-child {
+  display: block;
+  margin-bottom: .6em;
+  border-radius: 3px;
+  margin-bottom: 0;
+}
+/* line 43, ../sass/howto.scss */
+.work-example a:first-child img {
+  border-radius: 3px;
+}
+/* line 45, ../sass/howto.scss */
+.work-example a:last-child {
+  display: block;
+  background: #ebebeb;
+  padding: 1em;
+  font-size: 0.8em;
+  color: #000;
+  border-radius: 3px;
+}
+/* line 53, ../sass/howto.scss */
+.work-example a:last-child:hover {
+  background: #dbdbdb;
+}
+
+/* line 58, ../sass/howto.scss */
+footer {
+  background: #eee;
+  padding: 1em 0;
+  margin: 2em 0 0;
+}
+/* line 64, ../sass/howto.scss */
+footer h4 {
+  text-align: center;
+  margin-bottom: 1em;
 }
