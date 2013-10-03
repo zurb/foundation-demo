@@ -145,18 +145,21 @@
 			  <h2>Need a website? <small>Aw yeah baby.</small></h2>
 			  <p>I'd love to work with you on some sort of totally bitchin' website. Let's talk.</p>
 
-			  <form class="custom">
+			  <form class="custom" data-abide="ajax">
 					<div class="row">
 						<div class="large-6 columns">
-							<input type="text" placeholder="First Name" />
+							<input type="text" placeholder="First Name" required />
+							<small class="error">A valid first name is required.</small>
 						</div>
 						<div class="large-6 columns">
-							<input type="text" placeholder="Last Name" />
+							<input type="text" placeholder="Last Name" required />
+							<small class="error">A valid last name is required.</small>
 						</div>
 					</div>
 					<div class="row">
 						<div class="large-6 columns">
-							<input type="text" placeholder="Email" />
+							<input type="text" placeholder="Email" required pattern="email" />
+							<small class="error">A valid email address is required.</small>
 						</div>
 						<div class="large-6 columns">
 							<select>
@@ -194,6 +197,20 @@
   
   <script>
     $(document).foundation();
+
+  	$('#webWork').on('closed', function(){
+  		$(this).find('form')[0].reset();
+  	});
+
+    $('form.custom').on('valid', function(event){
+    	$('#webWork').foundation('reveal', 'close');			
+    });
+
+    // In Foundation 4.3.3 there will be a data-abide="ajax" option
+    $('form.custom').on('submit', function(event){
+    	event.preventDefault();
+    	return false;
+    });
   </script>
 </body>
 </html>
